@@ -1,0 +1,59 @@
+indoor_navigation/scripts
+
+guanji.py:/soc 相应话题下系统自动关机
+
+imupub.py：与视觉工控机网线相连，将云台imu解码信息打包为/imu2话题发出
+
+lis.py:/soc 相应话题下,速度指令copy为/cmd_vel2，自由调节比例系数。打包发布自主模式下地图目标点，删除轨迹，保存地图
+
+savemap.py: 执行保存地图launch文件
+
+start.py: 显控指令socket接收，打包/soc发布
+
+start2.py: 将控制模式，状态信息，gps数据，地图相关参数信息，速度，位姿，路径（全局规划轨迹或者循迹轨迹），云台控制模式，云台转角打包发布给显控
+
+startguiji.py: 将"/home/x805/catkin_ws/src/indoor_navigation/scripts/guiji"路径下保存的轨迹列表信息发布给显控
+
+startmap.py: 将地图数据发布给显控
+
+test.py: 测试用，发布伪状态信息，伪云台转角，伪云台控制模式
+
+vision.py：将视觉人身检测数据打包为/vision发布
+
+visionvel.py：视觉跟随功能控制程序
+
+程序启动入口： control_node/cankao.launch:在rviz绘制参考人为设定轨迹
+
+control_node/start.launch：室内外切换ekf融合主程序
+
+control_node/start2.launch：室内外切换，室外纯gps主程序
+
+control_node/startlio.launch：liosam定位程序
+
+control_node/startsn.launch：室内定位程序
+
+pkg: decision_node 少将室外gps循迹python程序
+
+control_node 小车底盘控制程序
+
+gps_lio lio_sam算法所用gpsutm坐标转换程序
+
+gps_umd gpsutm坐标转换程序
+
+hit_nav 循迹模式下循环发送目标点程序
+
+laser_scan_matecher 激光点云匹配里程计
+
+mrobot_teleop 遥控程序包 myserial_node 惯导组合驱动包
+
+miiboo_imu imu驱动包
+
+ytnode 云台控制
+
+velodyne dataset 激光雷达障碍物读取
+
+velodyne xh 激光雷达驱动包
+
+hit_nav 循环发送目标点
+
+navigation-kinetic-devel/robot_pose_ekf ekf融合包
