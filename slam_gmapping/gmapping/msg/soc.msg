@@ -1,0 +1,12 @@
+int16 code
+int16 code2
+int16 action
+string key
+string filename
+float32 yaw
+float32 pitch
+float32 roll
+float32 x1
+float32 y1
+float32 x2
+float32 y2

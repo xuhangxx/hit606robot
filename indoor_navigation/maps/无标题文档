@@ -1,0 +1,20 @@
+def txtToJson():
+    # 文件路径
+    path = "guiji0.txt"
+    # 读取文件
+    with io.open(path,'r',encoding='UTF-8') as file:
+        # 定义一个用于切割字符串的正则
+        seq = re.compile(" ")
+        result = []
+        # 逐行读取
+        for line in file:
+            lst = seq.split(line.strip())
+            item = {
+                "x": lst[0]
+                #"y": lst[1]
+            }
+            result.append(item)
+        print(type(result))
+    # 关闭文件
+    with io.open('txtToJson.json', 'w') as dump_f:
+        json.dump(result,dump_f)

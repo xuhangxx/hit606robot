@@ -1,0 +1,32 @@
+%YAML:1.0
+---
+type: IMU
+name: imu
+Gyr:
+   unit: " rad/s"
+   avg-axis:
+      gyr_n: 0.
+      gyr_w: 0.
+   x-axis:
+      gyr_n: 0.
+      gyr_w: 0.
+   y-axis:
+      gyr_n: 0.
+      gyr_w: 0.
+   z-axis:
+      gyr_n: 0.
+      gyr_w: 0.
+Acc:
+   unit: " m/s^2"
+   avg-axis:
+      acc_n: 2.2343592834634187e-02
+      acc_w: 2.2807786729720834e-04
+   x-axis:
+      acc_n: 1.0750080699142871e-02
+      acc_w: 6.8470998568699639e-05
+   y-axis:
+      acc_n: 2.9829773423848974e-02
+      acc_w: 3.6390447426021592e-04
+   z-axis:
+      acc_n: 2.6450924380910717e-02
+      acc_w: 2.5185812906270945e-04

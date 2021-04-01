@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="decision_node" type="decision_node_node" name="decision_node_node" output="screen" />
+  <!--node pkg="decision_node" name="path_display" type="path_display.py" output="screen" /-->
+  <node pkg="decision_node" name="path_decison_test" type="path_decision3.py" output="screen" />
+</launch>

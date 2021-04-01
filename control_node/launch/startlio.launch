@@ -1,0 +1,48 @@
+<launch>
+
+    <arg name="project" default="lio_sam"/>
+
+    <param name="/use_sim_time" value="false" />
+
+   <!--<node name="imu_read_node" pkg="miiboo_imu"  type="imu_read" output="screen">
+    <param name="c0"     value="1e6"/>
+    <param name="c4"     value="1e6"/>
+    <param name="c8"     value="1e-6"/>
+    <param name="avc0"     value="1e6"/>
+    <param name="avc4"     value="1e6"/>
+    <param name="avc8"     value="1e-6"/>
+   </node>
+   
+   
+   <node pkg="my_serial_node" type="my_serial_node" name="my_serial_node" output="screen" >
+    <param name="num" value="14"/>
+   </node>    
+
+   <include file="$(find control_node)/launch/control_nodelio.launch">
+    </include>
+
+
+   <include file="$(find velodyne_pointcloud)/launch/VLP16lio.launch">
+   </include>
+   
+
+   <node name="gps_conv" pkg="gps_common2" type="utm_odometry_node2">
+    <param name="rot_covariance" value="99999" />
+    <param name="frame_id" value="base_link" />
+   </node>-->
+    <!-- Parameters -->
+    <rosparam file="$(find lio_sam)/config/params.yaml" command="load" />
+
+    <!--- LOAM -->
+    <include file="$(find lio_sam)/launch/include/module_loam.launch" />
+
+    <!--- Robot State TF -->
+    <include file="$(find lio_sam)/launch/include/module_robot_state_publisher.launch" />
+
+    <!--- Run Navsat -->
+    <include file="$(find lio_sam)/launch/include/module_navsat.launch" />
+
+    <!--- Run Rviz-->
+    <include file="$(find lio_sam)/launch/include/module_rviz.launch" />
+
+</launch>

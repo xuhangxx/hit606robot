@@ -1,0 +1,7 @@
+image: /home/x805/catkin_ws/src/indoor_navigation/maps/work0.pgm
+resolution: 0.032000
+origin: [-16.256000, -4.992000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

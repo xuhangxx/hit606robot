@@ -1,0 +1,7 @@
+<!-- -*- mode: XML -*- -->
+<!-- run velodyne_laserscan/LaserScanNodelet in a nodelet manager -->
+
+<launch>
+  <node pkg="velodyne_datatest" type="velodyne_datatest_node" name="velodyne_datatest_node" output="screen" />
+  
+</launch>

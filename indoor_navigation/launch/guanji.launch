@@ -1,0 +1,6 @@
+<launch>
+   
+   <node name="guanji" pkg="indoor_navigation" type="guanji.py" output="screen">
+   </node>
+  
+</launch>

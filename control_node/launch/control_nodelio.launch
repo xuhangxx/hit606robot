@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="control_node" type="control_nodelio" name="control_nodelio" output="screen" >
+  </node>
+</launch>

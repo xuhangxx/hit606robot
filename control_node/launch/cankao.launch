@@ -1,0 +1,18 @@
+<launch>
+
+   
+   <node pkg="control_node" type="cankao" name="cankao" output="screen" >
+   </node>
+
+   
+
+   <node pkg="tf" type="static_transform_publisher" name="map_to_odom" 
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /map /odom 40" />
+   
+
+   <node pkg="rviz" type="rviz" name="rviz" 
+    args="-d $(find control_node)/demo_gmapping.rviz"/>
+
+  
+
+</launch>

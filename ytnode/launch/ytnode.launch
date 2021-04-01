@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="ytnode" type="ytnode" name="ytnode" output="screen" />
+</launch>

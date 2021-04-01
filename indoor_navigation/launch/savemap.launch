@@ -1,0 +1,10 @@
+<!-- 
+Example launch file: uses laser_scan_matcher together with
+slam_gmapping 
+-->
+
+<launch>   
+  <node pkg="map_server" type="map_saver" name="map_saver" args="-f /home/x805/catkin_ws/src/indoor_navigation/maps/work0">
+  </node>
+
+</launch>

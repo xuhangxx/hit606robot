@@ -1,0 +1,41 @@
+controller_frequency: 3.0
+recovery_behavior_enabled: false
+clearing_rotation_allowed: false
+
+TrajectoryPlannerROS:
+   max_vel_x: 0.25
+   min_vel_x: 0.01
+   max_vel_y: 0.0  # zero for a differential drive robot
+   min_vel_y: 0.0
+   max_vel_theta: 8.0
+   min_vel_theta: -8.0
+   min_in_place_vel_theta: 0.5
+   escape_vel: -0.1
+   acc_lim_x: 1.5
+   acc_lim_y: 0.0 # zero for a differential drive robot
+   acc_lim_theta: 2.5
+
+   holonomic_robot: false
+   yaw_goal_tolerance: 0.18 # about 6 degrees / 0.1接近目标方向（就弧度来说）允许的误差（rad），此值太小会造成机器人在目标附近震荡
+   xy_goal_tolerance: 0.4  # meters  表示接近目标允许的误差（m），值不能小于地图的分辨率
+   latch_xy_goal_tolerance: true
+   pdist_scale: 0.9
+   gdist_scale: 0.5
+   meter_scoring: true
+
+   heading_lookahead: 1.4
+   heading_scoring: false
+   heading_scoring_timestep: 0.8
+   occdist_scale: 0.1
+   oscillation_reset_dist: 0.05
+   publish_cost_grid_pc: false
+   prune_plan: true
+
+   sim_time: 2 #规划器能看到未来多少秒
+   sim_granularity: 0.025
+   angular_sim_granularity: 0.025
+   vx_samples: 8
+   vy_samples: 0 # zero for a differential drive robot
+   vtheta_samples: 20
+   dwa: true
+   simple_attractor: false

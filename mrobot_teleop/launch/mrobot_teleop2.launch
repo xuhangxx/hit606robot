@@ -1,0 +1,4 @@
+<launch>
+  <node name="mrobot_teleop" pkg="mrobot_teleop" type="client.py" output="screen">
+  </node>
+</launch>
